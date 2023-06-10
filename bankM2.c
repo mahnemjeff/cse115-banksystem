@@ -26,20 +26,22 @@ int main() {
         }
         printf("\n");
         printf("\n\t****************Bank Management System Menu:****************\t\n");
-        printf("\t\t1. Add Customer\n");
-        printf("\t\t2. Sort Data Alphabetically by Name\n");
-        printf("\t\t3. Sort Data by Account Number\n");
-        printf("\t\t4. Sort Data by Balance\n");
-        printf("\t\t5. Search Customer by Account Number\n");
-        printf("\t\t6. Delete Customer by Account Number\n");
-        printf("\t\t7. Edit Customer Information\n");
-        printf("\t\t8. Change Password\n");
-        printf("\t\t9. Transfer Money\n");
-        printf("\t\t10. Sort and Generate Text File\n");
-        printf("\t\t11. Generate List of Customers by Service Region\n");
-        printf("\t\t12. Show all accounts\n");
-        printf("\t\t0. Exit\n\n");
-        printf("\tEnter your choice: ");
+        printf("\n");
+        printf("\t\t0. Return to menu\t\n");
+        printf("\t\t1. Add Customer\t\n");
+        printf("\t\t2. Sort Data Alphabetically by Name\t\n");
+        printf("\t\t3. Sort Data by Account Number\t\n");
+        printf("\t\t4. Sort Data by Balance\t\n");
+        printf("\t\t5. Search Customer by Account Number\t\n");
+        printf("\t\t6. Delete Customer by Account Number\t\n");
+        printf("\t\t7. Edit Customer Information\t\n");
+        printf("\t\t8. Change Password\t\n");
+        printf("\t\t9. Transfer Money\t\n");
+        printf("\t\t10. Sort and Generate Text File\t\n");
+        printf("\t\t11. Generate List of Customers by Service Region\t\n");
+        printf("\t\t12. Show all accounts\t\n");
+        printf("\t\t-1. Exit from program\t\n");
+        printf("\n\tEnter your choice: ");
         int choice;
         scanf("%d", &choice);
         switch (choice)
@@ -145,7 +147,7 @@ int main() {
             case 12:
                 printAllAccounts(customers, count);
                 break;
-            case 0:
+            case -1:
                 printf("\n\t**************Exiting the program**************\t\n");
                 printf("\n");
                 writeData(customers, count);
@@ -153,6 +155,8 @@ int main() {
                 printf("\tThank you for your time and have a good day!\t\n");
                 printf("\t=============================================\t\n");
                 return 0;
+                break;
+            case 0:
                 break;
         } // end of switch case
             } // end of if
@@ -183,6 +187,7 @@ int main() {
                 case 3:
                     printf("\t*************Exiting the program*************\t\n");
                     break;
+                    return;
                 default:
                     printf("\n\tError!\t\n");
                     break;
